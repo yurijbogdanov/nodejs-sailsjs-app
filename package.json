@@ -1,9 +1,12 @@
 {
   "name": "nodejs-sailsjs-app",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
-  "keywords": [],
+  "version": "0.0.1",
+  "description": "nodejs-sailsjs-app",
+  "keywords": ["nodejs", "sailsjs", "node", "sails"],
+  "engines": {
+    "node": "7.x"
+  },
   "dependencies": {
     "ejs": "2.3.4",
     "grunt": "1.0.1",
