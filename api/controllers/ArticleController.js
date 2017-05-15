@@ -6,6 +6,11 @@
  */
 
 module.exports = {
-
+  find: function (req, res) {
+    Article.find({}).exec(function (err, records) {
+      if (err) return res.ok(err);
+      return res.ok(records);
+    });
+  }
 };
 
