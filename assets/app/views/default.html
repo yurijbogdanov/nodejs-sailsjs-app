@@ -5,39 +5,39 @@
         <h3>Article</h3>
 
         <ol>
-            <li ng-repeat="article in articles">
-                #id {{ article.id }} | "{{ article.title }}"
-            </li>
+            <li ng-repeat="article in articles">#id {{ article.id }} | "{{ article.title }}"</li>
         </ol>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <h3>Category</h3>
 
         <ol>
-            <li ng-repeat="category in categories">
-                #id {{ category.id }} | "{{ category.name }}"
-            </li>
+            <li ng-repeat="category in categories">#id {{ category.id }} | "{{ category.name }}"</li>
         </ol>
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-2">
         <h3>Tag</h3>
 
         <ol>
-            <li ng-repeat="tag in tags">
-                #id {{ tag.id }} | "{{ tag.name }}"
-            </li>
+            <li ng-repeat="tag in tags">#id {{ tag.id }} | "{{ tag.name }}"</li>
+        </ol>
+    </div>
+
+    <div class="col-md-2">
+        <h3>Comment</h3>
+
+        <ol>
+            <li ng-repeat="comment in comments">#id {{ comment.id }} | "{{ comment.content }}"</li>
         </ol>
     </div>
 
     <div class="col-md-3">
-        <h3>Comment</h3>
+        <h3>User</h3>
 
         <ol>
-            <li ng-repeat="comment in comments">
-                #id {{ comment.id }} | "{{ comment.content }}"
-            </li>
+            <li ng-repeat="user in users">#id {{ user.id }} | "{{ user.email }}"</li>
         </ol>
     </div>
 </div>

@@ -1,11 +1,7 @@
 /**
- * CategoryController
- *
- * @description :: Server-side logic for managing categories
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ * Controller CategoryController
+ * @link http://sailsjs.com/documentation/concepts/controllers
  */
-
 module.exports = {
 
 };
-

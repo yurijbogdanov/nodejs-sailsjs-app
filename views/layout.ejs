@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/styles/importer.css">
+
     <!--STYLES END-->
 
     <style>
-        html, body { height: 100%; font-family: "Roboto", sans-serif; }
+        html, body { height: 100%; font-family: "Roboto", sans-serif; font-size: 12px; }
         a, button, select, table { outline: 0 !important; }
         textarea { resize: vertical; }
     </style>
@@ -38,7 +38,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.min.js"></script>
 
     <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
+
     <!--SCRIPTS END-->
 
     <script>
@@ -71,25 +71,30 @@
          * Controllers
          */
         angular.module('app').controller('DefaultController', DefaultController);
-        DefaultController.$inject = ['$scope', '$log', 'Article', 'Category', 'Tag', 'Comment'];
-        function DefaultController($scope, $log, Article, Category, Tag, Comment) {
+        DefaultController.$inject = ['$scope', '$log', 'User', 'Article', 'Category', 'Tag', 'Comment'];
+        function DefaultController($scope, $log, User, Article, Category, Tag, Comment) {
+          $scope.users = [];
+          User.find(function (users) {
+            $scope.users = users;
+          });
+
           $scope.articles = [];
-          Article.findAll(function (articles) {
+          Article.find(function (articles) {
             $scope.articles = articles;
           });
 
           $scope.categories = [];
-          Category.findAll(function (categories) {
+          Category.find(function (categories) {
             $scope.categories = categories;
           });
 
           $scope.tags = [];
-          Tag.findAll(function (tags) {
+          Tag.find(function (tags) {
             $scope.tags = tags;
           });
 
           $scope.comments = [];
-          Comment.findAll(function (comments) {
+          Comment.find(function (comments) {
             $scope.comments = comments;
           });
         }
@@ -105,7 +110,7 @@
             update: {
               method: 'PUT'
             },
-            findAll: {
+            find: {
               method: 'GET',
               isArray: true
             }
@@ -119,7 +124,7 @@
             update: {
               method: 'PUT'
             },
-            findAll: {
+            find: {
               method: 'GET',
               isArray: true
             }
@@ -133,7 +138,7 @@
             update: {
               method: 'PUT'
             },
-            findAll: {
+            find: {
               method: 'GET',
               isArray: true
             }
@@ -147,7 +152,7 @@
             update: {
               method: 'PUT'
             },
-            findAll: {
+            find: {
               method: 'GET',
               isArray: true
             }
@@ -161,7 +166,7 @@
             update: {
               method: 'PUT'
             },
-            findAll: {
+            find: {
               method: 'GET',
               isArray: true
             }
